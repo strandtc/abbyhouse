@@ -1,0 +1,18 @@
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+node_modules/
+*.log
+.env
+
+# Heavy FEMA flood-map artifacts — not committed to git.
+# These can be re-downloaded from the FEMA Map Service Center at any time:
+#   https://msc.fema.gov/portal/search?AddressQuery=2980+Budd+Road+Stockbridge+MI+49285
+# The interactive FEMA viewer is a better way to see the parcel anyway (the PNG is too
+# large to render crisply in a web browser).
+FEMA_FIRM_panel_26065C0425D.png
+FEMA_FIRM_panel_26065C0425D.pgw
+FEMA_FIRM_panel_26065C0425D.zip
+FEMA_FIRM_README.pdf

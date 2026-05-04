@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2980 Budd Road, Stockbridge MI — Due Diligence Report</title>
+<style>
+:root {
+  --c-bg: #f8f6f1;
+  --c-paper: #ffffff;
+  --c-ink: #2a2a2a;
+  --c-muted: #6b6b6b;
+  --c-rule: #e2ddd1;
+  --c-accent: #5a4a32;
+  --c-link: #2c5d8f;
+  --c-confirmed: #3d8b40;
+  --c-estimate: #c98a16;
+  --c-recommend: #1f6f9a;
+  --c-assumption: #9a4f1f;
+  --c-open: #6b4d8e;
+  --c-alert: #b03030;
+  --c-alert-bg: #fdf2f0;
+  --c-positive: #2e7d32;
+  --c-positive-bg: #f1f8f1;
+  --c-warn-bg: #fdf7e6;
+  --c-info-bg: #f0f6fb;
+  --max: 1100px;
+  --r: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--c-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+header.hero {
+  background: linear-gradient(180deg, #3a2f1e 0%, #4a3d27 100%);
+  color: #f5f0e6;
+  padding: 48px 24px;
+  text-align: center;
+}
+header.hero .subtitle { color: #e0d6bc; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 6px; }
+header.hero h1 { margin: 0 0 8px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+header.hero .addr { font-size: 15px; color: #d4c9a8; }
+header.hero .meta { margin-top: 16px; font-size: 13px; color: #c4b894; }
+
+main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+section { background: var(--c-paper); margin: 28px 0; padding: 32px; border-radius: var(--r); box-shadow: var(--shadow); }
+section.flush { padding: 0; overflow: hidden; }
+h2 { font-size: 22px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 2px solid var(--c-accent); color: var(--c-accent); }
+h3 { font-size: 17px; margin: 24px 0 10px; color: var(--c-ink); }
+h4 { font-size: 15px; margin: 16px 0 8px; color: var(--c-muted); text-transform: uppercase; letter-spacing: .05em; }
+p { margin: 0 0 12px; }
+ul, ol { padding-left: 24px; margin: 0 0 12px; }
+li { margin-bottom: 6px; }
+hr { border: 0; height: 1px; background: var(--c-rule); margin: 24px 0; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  vertical-align: 1px;
+  margin-right: 4px;
+}
+.badge.confirmed { background: #e6f3e7; color: var(--c-confirmed); }
+.badge.estimate { background: #fbeed1; color: var(--c-estimate); }
+.badge.recommend { background: #dcebf6; color: var(--c-recommend); }
+.badge.assumption { background: #f7e0d2; color: var(--c-assumption); }
+.badge.open { background: #ece4f3; color: var(--c-open); }
+
+/* Callouts */
+.callout {
+  border-left: 4px solid;
+  padding: 14px 16px;
+  margin: 16px 0;
+  border-radius: 0 var(--r) var(--r) 0;
+}
+.callout.alert { border-color: var(--c-alert); background: var(--c-alert-bg); }
+.callout.alert h3 { color: var(--c-alert); margin-top: 0; }
+.callout.warn { border-color: var(--c-estimate); background: var(--c-warn-bg); }
+.callout.warn h3 { color: var(--c-estimate); margin-top: 0; }
+.callout.positive { border-color: var(--c-positive); background: var(--c-positive-bg); }
+.callout.positive h3 { color: var(--c-positive); margin-top: 0; }
+.callout.info { border-color: var(--c-recommend); background: var(--c-info-bg); }
+.callout.info h3 { color: var(--c-recommend); margin-top: 0; }
+
+/* Tooltips */
+.tt {
+  border-bottom: 1px dotted var(--c-muted);
+  cursor: help;
+  position: relative;
+}
+.tt::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2a2a2a;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.4;
+  width: max-content;
+  max-width: 320px;
+  white-space: normal;
+  text-align: left;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s;
+}
+.tt:hover::after, .tt:focus::after, .tt.tt-active::after { opacity: 1; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--c-rule); vertical-align: top; }
+th { background: #faf6ec; color: var(--c-accent); font-weight: 600; font-size: 13px; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.highlight { background: #fffbe5; }
+
+/* Property summary card */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 12px 0; }
+.fact { background: #faf6ec; padding: 14px; border-radius: var(--r); }
+.fact .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--c-muted); margin-bottom: 4px; }
+.fact .val { font-size: 18px; font-weight: 600; color: var(--c-accent); }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 28px; margin: 16px 0; }
+.timeline::before { content: ""; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 2px; background: var(--c-rule); }
+.tl-event { position: relative; padding: 8px 0 8px 12px; margin-bottom: 4px; }
+.tl-event::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  border: 2px solid var(--c-paper);
+  box-shadow: 0 0 0 2px var(--c-accent);
+}
+.tl-event.death::before { background: #2a2a2a; box-shadow: 0 0 0 2px #2a2a2a; }
+.tl-event.transaction::before { background: var(--c-recommend); box-shadow: 0 0 0 2px var(--c-recommend); }
+.tl-event.foreclosure::before { background: var(--c-alert); box-shadow: 0 0 0 2px var(--c-alert); }
+.tl-event.redemption::before { background: var(--c-positive); box-shadow: 0 0 0 2px var(--c-positive); }
+.tl-event.improvement::before { background: var(--c-estimate); box-shadow: 0 0 0 2px var(--c-estimate); }
+.tl-event .date { font-weight: 600; color: var(--c-accent); font-size: 13px; }
+.tl-event .desc { font-size: 14px; }
+.tl-event.future { opacity: 0.6; }
+
+/* Diagram boxes */
+.flow { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 16px 0; font-size: 13px; }
+.flow .box { background: #faf6ec; border: 1px solid var(--c-rule); padding: 10px 14px; border-radius: 6px; max-width: 220px; }
+.flow .arrow { color: var(--c-muted); font-size: 18px; }
+
+/* Image / map embeds */
+.embed-wrap { margin: 16px 0; }
+.embed-wrap iframe, .embed-wrap img { width: 100%; max-width: 100%; border: 1px solid var(--c-rule); border-radius: var(--r); }
+.thumbnail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+.thumbnail { background: #faf6ec; padding: 12px; border-radius: var(--r); text-align: center; font-size: 13px; }
+.thumbnail a { display: block; text-decoration: none; color: var(--c-ink); }
+.thumbnail a:hover { color: var(--c-link); }
+.thumbnail .icon { font-size: 32px; margin-bottom: 6px; }
+
+/* Source list */
+.src-list { font-size: 14px; }
+.src-list li { margin-bottom: 4px; }
+.src-list .doc-num { font-family: ui-monospace, "SF Mono", Menlo, monospace; background: #faf6ec; padding: 1px 6px; border-radius: 3px; font-size: 12px; }
+
+/* Nav */
+nav.toc {
+  position: sticky;
+  top: 0;
+  background: rgba(248,246,241,.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--c-rule);
+  padding: 12px 24px;
+  z-index: 100;
+  font-size: 13px;
+}
+nav.toc .inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px; }
+nav.toc a { color: var(--c-muted); text-decoration: none; }
+nav.toc a:hover { color: var(--c-accent); }
+
+/* Footer */
+footer { text-align: center; color: var(--c-muted); font-size: 12px; padding: 32px 16px; max-width: var(--max); margin: 0 auto; }
+
+/* Print */
+@media print {
+  nav.toc, footer { display: none; }
+  body { background: white; }
+  section { box-shadow: none; border: 1px solid var(--c-rule); page-break-inside: avoid; }
+  .callout { page-break-inside: avoid; }
+  .tt { border-bottom: none; }
+  .tt::after { display: none; }
+  a { color: black; text-decoration: none; }
+}
+
+@media (max-width: 640px) {
+  header.hero { padding: 32px 16px; }
+  header.hero h1 { font-size: 22px; }
+  main { padding: 0 12px; }
+  section { padding: 20px 16px; margin: 16px 0; }
+  table { font-size: 13px; }
+  th, td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="subtitle">Pre-Inspection Due-Diligence Report</div>
+  <h1>2980 Budd Road, Stockbridge, Michigan 49285</h1>
+  <div class="addr">Stockbridge Township · Ingham County · Parcel 33-16-16-04-400-023</div>
+  <div class="meta">Prepared 2026-05-04 · Inspection contingency window in progress</div>
+</header>
+
+<nav class="toc">
+  <div class="inner">
+    <a href="#summary">Summary</a>
+    <a href="#critical">Critical Actions</a>
+    <a href="#property">Property</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#owner">Seller</a>
+    <a href="#environment">Environment</a>
+    <a href="#permits">Permits</a>
+    <a href="#market">Market</a>
+    <a href="#inspector">Inspector List</a>
+    <a href="#title">Title List</a>
+    <a href="#questions">Seller Questions</a>
+    <a href="#vendors">Vendors</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="summary">
+  <h2>How to use this report</h2>
+  <p>This report compiles publicly-available records — deeds, court filings, tax-foreclosure publications, environmental databases, FEMA maps, and the EGLE well log — for the property your daughter has a signed offer on. It is meant to surface, before the inspection contingency expires, anything that warrants a question to the inspector, the title company, or the seller.</p>
+  <p>Every non-trivial claim is tagged so you can see how confident I am in it:</p>
+  <p>
+    <span class="badge confirmed">Confirmed</span> Verified against a primary public-records source.<br>
+    <span class="badge estimate">Estimate</span> A range or model — the actual value may differ; verify with the local agent or assessor.<br>
+    <span class="badge recommend">Recommendation</span> An action you should take.<br>
+    <span class="badge assumption">Assumption</span> An inference I drew that is not directly verified — flag it for re-checking.<br>
+    <span class="badge open">Open question</span> Something we don't know the answer to — needs to be answered before closing.
+  </p>
+  <p style="font-size: 13px; color: var(--c-muted);">Underlined dotted text — like <span class="tt" data-tip="A small example tooltip. Hover or tap to read the definition.">this</span> — has a tooltip definition. Click or hover to read.</p>
+</section>
+
+<section id="critical">
+  <h2>Critical action items <span style="font-size: 14px; color: var(--c-muted); font-weight: normal;">— do these inside the inspection contingency window</span></h2>
+
+  <div class="callout alert">
+    <h3>1. Verify the 2026 tax-foreclosure was redeemed for THIS specific parcel</h3>
+    <p><span class="badge confirmed">Confirmed</span> The parcel was on Ingham County's <a href="ingham_2025_tax_insert_publication.pdf">2025 Tax Insert</a> — the legal <span class="tt" data-tip="In Michigan, before a property can be foreclosed for unpaid taxes, the County Treasurer must publish a 'show cause' notice and hold hearings. This is the legal warning that the property will be lost unless the tax is paid by March 31 of the foreclosure year.">show-cause publication</span> — with <strong>$7,800.17</strong> delinquent. Both <strong>CLEAR SKY TRUST</strong> (current owner) and <strong>ROBERT L HAWKINS TRUST</strong> (prior mortgagee) were noticed. The show-cause hearing was 2/12/2026, the judicial-foreclosure hearing was 2/19/2026, and the absolute foreclosure date was 3/31/2026 — all already passed.</p>
+    <p>A "Redemption of Notice of Forfeiture" was recorded as document <strong>2026-001338</strong> on 1/16/2026 with consideration of <strong>$7,800.17 — an exact dollar match</strong>. <span class="badge assumption">Assumption</span> This strongly suggests the redemption covers this parcel, but the recorded document is tagged "Multiple Legals: See Record" — it covers multiple parcels and only the document image confirms which.</p>
+    <p><strong>Action:</strong> Have the title company pull doc 2026-001338 from <a href="https://tapestry.fidlar.com/Tapestry2/Search.aspx" target="_blank">Fidlar Tapestry</a> (≈$10) and confirm parcel <strong>33-16-16-04-400-023</strong> is in its legal description. If it isn't, title vested in the County and Clear Sky Trust cannot legally convey the property.</p>
+    <p><strong>Faster verification:</strong> phone Ingham County Treasurer Alan Fox at <a href="tel:5176767233">(517) 676-7233</a> and ask whether all 2023+ taxes on parcel 33-16-16-04-400-023 are current.</p>
+  </div>
+
+  <div class="callout alert">
+    <h3>2. Confirm the $67,500 seller-financed mortgage to the Hawkins Trust has been discharged</h3>
+    <p><span class="badge confirmed">Confirmed</span> On 8/29/2022 Clear Sky Trust gave the Hawkins Robert L Trust a <strong>$67,500 mortgage</strong> as part of the original purchase (recorded as document <strong>2022-032386</strong>, paired with the warranty deed in). I did not find a recorded discharge of this mortgage in the Ingham deed index.</p>
+    <p><span class="badge open">Open question</span> If no discharge exists, the Hawkins Trust still holds a recorded lien against the property. The title company must order a payoff letter from the Hawkins Trust attorney and require the discharge to be recorded at or before closing.</p>
+  </div>
+
+  <div class="callout warn">
+    <h3>3. Test for radon, arsenic in well water, and full water-quality panel</h3>
+    <p><span class="badge confirmed">Confirmed</span> Ingham County is <a href="https://www.epa.gov/sites/default/files/2014-08/documents/michigan.pdf" target="_blank">EPA Radon Zone 2</a> (moderate-to-elevated indoor radon), AND it is <a href="https://www.michiganpublic.org/environment-science/2014-07-02/theres-arsenic-in-michigans-well-water-but-not-a-lot-of-people-are-talking-about-it" target="_blank">among the worst counties in Michigan for naturally-occurring arsenic</a> in well water.</p>
+    <p><span class="badge confirmed">Confirmed</span> The well on this parcel is <strong>281 ft deep into bedrock</strong>, drilled 2/21/1980 (<a href="https://www.egle.state.mi.us/wellogic/" target="_blank">EGLE Wellogic ID 33000001176</a>) — that is the aquifer profile most associated with arsenic.</p>
+    <p>The <span class="tt" data-tip="A partial-basement style common in 1860-1950 Midwest homes. Often dirt floor, fieldstone walls, low ceiling, no insulation — a major entry path for radon and a frequent moisture/mold problem.">Michigan basement</span> + <span class="tt" data-tip="Foundation built of irregular stones from local fields, mortared together. 165-year-old fieldstone foundations often have crumbling mortar, water infiltration, and no waterproofing.">fieldstone foundation</span> profile makes radon-entry risk elevated regardless of zone.</p>
+    <p><span class="badge recommend">Action</span> Add to the home inspection: short-term radon test (48-96 hr closed-house), full water panel including arsenic, lead, copper, nitrates, total coliform/E. coli, iron, manganese, hardness, pH, and PFAS. Cost roughly $250-500 for the water panel + $15-30 for a radon kit.</p>
+  </div>
+
+  <div class="callout warn">
+    <h3>4. Phone the Stockbridge Township building department for the permit history</h3>
+    <p><span class="badge confirmed">Confirmed</span> There is no online permit search for Stockbridge Township; the only way to verify is by phone.</p>
+    <p>Call <a href="tel:5178519362">(517) 851-9362</a> and ask for permit history on parcel 33-16-16-04-400-023 since 8/29/2022. Specifically ask whether each of these were permitted and have a final inspection sign-off:</p>
+    <ul>
+      <li>Furnace replacement (claimed January 2026)</li>
+      <li>Roof replacement (metal roof, claimed)</li>
+      <li>Electrical updates</li>
+      <li>Plumbing updates</li>
+      <li>Insulation, drywall, structural work</li>
+    </ul>
+    <p><span class="badge assumption">Assumption</span> If permits are missing, the work is "unpermitted" — that creates risk for the homeowners insurance, lender, and a future buyer's lender. You should price-adjust the offer or require the seller to retroactively permit before closing.</p>
+  </div>
+
+  <div class="callout info">
+    <h3>5. Pull the deed images from Tapestry — confirms identity, transfer terms, and trustee authority</h3>
+    <p>Three documents are worth the ~$30 in fees because they answer otherwise-unanswered questions:</p>
+    <ul>
+      <li><strong>Doc 2022-032385</strong> (Warranty Deed, Hawkins Trust → Clear Sky Trust, $75,000) — reveals trustee Eric Snyder's signing address, which would settle whether he is the same Eric David Snyder who had Michigan contracting licenses suspended in 2019. Also confirms the legal description matches the parcel.</li>
+      <li><strong>Doc 2022-032386</strong> (the $67,500 mortgage) — and any recorded discharge.</li>
+      <li><strong>Doc 2026-001338</strong> (the redemption) — confirms parcel 33-16-16-04-400-023 is in the redeemed list.</li>
+    </ul>
+    <p>Search and order at <a href="https://tapestry.fidlar.com/Tapestry2/Search.aspx" target="_blank">Fidlar Tapestry</a>. $8.75 search + $1.00/page.</p>
+  </div>
+</section>
+
+<section id="property">
+  <h2>Property identification</h2>
+
+  <div class="facts">
+    <div class="fact"><div class="lbl">Address</div><div class="val">2980 Budd Road</div><div style="font-size: 13px; color: var(--c-muted);">Stockbridge, MI 49285</div></div>
+    <div class="fact"><div class="lbl">County / Township</div><div class="val">Ingham / Stockbridge</div></div>
+    <div class="fact"><div class="lbl">Parcel ID</div><div class="val" style="font-size: 14px; font-family: ui-monospace, monospace;">33-16-16-04-400-023</div></div>
+    <div class="fact"><div class="lbl">Year Built</div><div class="val">1860</div></div>
+    <div class="fact"><div class="lbl">Lot Size</div><div class="val">1.68 acres</div><div style="font-size: 13px; color: var(--c-muted);">400 × 183 ft</div></div>
+    <div class="fact"><div class="lbl">Square Feet</div><div class="val">1,700</div><div style="font-size: 13px; color: var(--c-muted);">4 BR / 2 BA, 2 stories</div></div>
+    <div class="fact"><div class="lbl">List Price</div><div class="val">$284,900</div><div style="font-size: 13px; color: var(--c-muted);">reduced from $319,900</div></div>
+    <div class="fact"><div class="lbl">2025 Taxes</div><div class="val">$5,607</div><div style="font-size: 13px; color: var(--c-muted);">will reset post-sale, see Market</div></div>
+  </div>
+
+  <h3>Property characteristics</h3>
+  <table>
+    <tr><th>Foundation</th><td>Stone, with crawl space + <span class="tt" data-tip="Partial basement common in 1860s-1950s Midwest homes. Often dirt floor or thin slab, fieldstone walls, low ceiling, no insulation. Significant moisture, mold, and radon-entry risk.">Michigan basement</span> (partial)</td></tr>
+    <tr><th>Roof</th><td>Metal (recently replaced — see <a href="#permits">Permits</a>)</td></tr>
+    <tr><th>Heating</th><td>Forced air, new furnace January 2026</td></tr>
+    <tr><th>Water</th><td>Private well (281 ft deep, drilled 1980)</td></tr>
+    <tr><th>Sewer</th><td>Septic tank (no online record; call Ingham Health Dept)</td></tr>
+    <tr><th>School District</th><td>Stockbridge Community Schools (Emma Smith Elementary)</td></tr>
+    <tr><th>Listing</th><td><a href="https://brickbuiltrealestate.com/listing-detail/1177882013/2980-Budd-Road-Stockbridge-MI" target="_blank">Brick Built Real Estate, MLS #26006743</a> · <a href="https://www.zillow.com/homedetails/2980-Budd-Rd-Stockbridge-MI-49285/74031386_zpid/" target="_blank">Zillow</a></td></tr>
+    <tr><th>Renovations claimed</th><td>"new furnace JAN 2026, flooring, drywall, lighting, paint, roof, kitchen, bathrooms, porches, new insulation, hardy wired smoke detectors"</td></tr>
+  </table>
+
+  <h3>See it on the map</h3>
+  <div class="thumbnail-grid">
+    <div class="thumbnail">
+      <a href="https://www.google.com/maps/place/2980+Budd+Rd,+Stockbridge,+MI+49285/@42.4992,-84.2003,18z" target="_blank">
+        <div class="icon">🗺️</div>
+        Google Maps satellite view
+      </a>
+    </div>
+    <div class="thumbnail">
+      <a href="https://www.bing.com/maps?cp=42.499168~-84.200343&lvl=18&style=h" target="_blank">
+        <div class="icon">📷</div>
+        Bing Maps Bird's Eye<br><span style="font-size:11px;color:var(--c-muted);">often has angled aerial views</span>
+      </a>
+    </div>
+    <div class="thumbnail">
+      <a href="https://www.historicaerials.com/viewer?lat=42.499168&lon=-84.200343&zoom=18" target="_blank">
+        <div class="icon">🕰️</div>
+        Historic Aerials (NETR)<br><span style="font-size:11px;color:var(--c-muted);">aerials from 1950s onwards</span>
+      </a>
+    </div>
+    <div class="thumbnail">
+      <a href="https://earthexplorer.usgs.gov/" target="_blank">
+        <div class="icon">🛰️</div>
+        USGS Earth Explorer<br><span style="font-size:11px;color:var(--c-muted);">multi-decade aerials, requires free account</span>
+      </a>
+    </div>
+    <div class="thumbnail">
+      <a href="https://ingham-equalization.rsgis.msu.edu/viewer/" target="_blank">
+        <div class="icon">📐</div>
+        Ingham GIS / Parcel viewer<br><span style="font-size:11px;color:var(--c-muted);">parcel boundaries, neighbor info</span>
+      </a>
+    </div>
+    <div class="thumbnail">
+      <a href="https://www.google.com/earth/about/versions/" target="_blank">
+        <div class="icon">🌍</div>
+        Google Earth Pro<br><span style="font-size:11px;color:var(--c-muted);">free download, has historic-imagery slider</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="embed-wrap">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-84.21034%2C42.49417%2C-84.19034%2C42.50417&layer=mapnik&marker=42.499168%2C-84.200343"
+      style="height: 380px;"
+      loading="lazy"
+      title="OpenStreetMap of 2980 Budd Road"></iframe>
+    <div style="font-size: 12px; color: var(--c-muted); margin-top: 6px;">OpenStreetMap centered on the parcel. Pin marks 42.499168, −84.200343.</div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>Property timeline</h2>
+  <p style="color: var(--c-muted); font-size: 14px;">Key recorded events for this parcel. Each event includes a confidence tag and links to the source where one exists.</p>
+
+  <div class="timeline">
+
+    <div class="tl-event">
+      <div class="date">1860</div>
+      <div class="desc">House built. <span class="badge confirmed">Confirmed</span> per Brick Built listing + Spokeo public records.</div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">1980-02-21</div>
+      <div class="desc">Well drilled — 281 ft deep into bedrock, static water 30 ft. Local Health Department permit on file. <span class="badge confirmed">Confirmed</span> (<a href="https://www.egle.state.mi.us/wellogic/" target="_blank">EGLE Wellogic Well ID 33000001176</a>).</div>
+    </div>
+
+    <div class="tl-event foreclosure">
+      <div class="date">2017-12-05</div>
+      <div class="desc">Michigan Treasury tax lien filed against Hawkins Robert + others — $8,198.41 (Doc 2017-043040). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event redemption">
+      <div class="date">2022-04-12</div>
+      <div class="desc">2017 Michigan Treasury tax lien <strong>released</strong> (Doc 2022-015219). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event foreclosure">
+      <div class="date">2022-03-29</div>
+      <div class="desc">Notice of Forfeiture by Ingham Treasurer against Hawkins Robert L for $1,029.67 in delinquent taxes (Doc 2022-013261). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event death">
+      <div class="date">~ June 2022</div>
+      <div class="desc"><strong>Robert Lee Hawkins dies.</strong> Death certificate recorded 6/22/2022 (Doc 2022-024562, marked "DIVORCED"). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">2022-07-11</div>
+      <div class="desc">Letters of Authority for Personal Representative recorded — son <strong>Robert L Hawkins II</strong> appointed PR of the estate (Doc 2022-026514). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event transaction">
+      <div class="date">2022-07-25</div>
+      <div class="desc">Personal Representative Deed: Hawkins Estate → <strong>MITTEN REI LLC</strong> (Doc 2022-028216). <span class="badge confirmed">Confirmed</span> Eric Snyder named as third party.</div>
+    </div>
+
+    <div class="tl-event transaction">
+      <div class="date">2022-08-29</div>
+      <div class="desc">
+        <strong>Same-day five-deed shuffle</strong> ending in Clear Sky Trust ownership at $75,000 with $67,500 seller-financing (the Hawkins Trust held the mortgage):
+        <ol style="margin-top: 4px;">
+          <li>MITTEN REI LLC quitclaims back to Hawkins Estate (curative) — Doc 2022-032382</li>
+          <li>Hawkins Estate quitclaims to <strong>HAWKINS ROBERT L TRUST</strong> — Doc 2022-032383</li>
+          <li>Trust certification recorded — Doc 2022-032384 (R. L. Hawkins II + Charles Hawkins as successor co-trustee, John J. Donahue III named)</li>
+          <li><strong>Warranty Deed: Hawkins Trust → CLEAR SKY TRUST, $75,000</strong> — Doc 2022-032385</li>
+          <li><strong>Mortgage: Clear Sky Trust → Hawkins Trust, $67,500</strong> (seller-financed) — Doc 2022-032386</li>
+        </ol>
+        <span class="badge confirmed">Confirmed</span> all five recordings via Ingham Fidlar Direct Search.
+      </div>
+    </div>
+
+    <div class="tl-event redemption">
+      <div class="date">2022-09-15</div>
+      <div class="desc">Pre-existing March 2022 tax forfeiture redeemed for $1,535.87 (Doc 2022-034266). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">2022-2025</div>
+      <div class="desc">Clear Sky Trust holds and renovates the property. Listed renovations in 2026 listing: flooring, drywall, lighting, paint, kitchen, bathrooms, porches, insulation, hardwired smoke detectors. <span class="badge open">Open question</span> No online permit history available — call township to verify.</div>
+    </div>
+
+    <div class="tl-event foreclosure">
+      <div class="date">~ Late 2025</div>
+      <div class="desc">Ingham 2025 Tax Insert publishes parcel <strong>33-16-16-04-400-023</strong> on the show-cause list with <strong>$7,800.17</strong> delinquent against both ROBERT L HAWKINS TRUST and CLEAR SKY TRUST. <span class="badge confirmed">Confirmed</span> (<a href="ingham_2025_tax_insert_publication.pdf">PDF page</a>)</div>
+    </div>
+
+    <div class="tl-event redemption">
+      <div class="date">2025-12-29 / 2026-01-16</div>
+      <div class="desc">Redemption of Notice of Forfeiture: Clear Sky Trust pays Ingham Treasurer <strong>$7,800.17</strong> — exact match to the parcel-level delinquency (Doc 2026-001338). <span class="badge assumption">Assumption</span> covers this parcel — verify by pulling the deed image.</div>
+    </div>
+
+    <div class="tl-event improvement">
+      <div class="date">January 2026</div>
+      <div class="desc">New furnace installed (per listing). <span class="badge open">Open question</span> Permit + final inspection sign-off — call township.</div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">2026-02-12</div>
+      <div class="desc"><span class="tt" data-tip="In Michigan tax-foreclosure procedure, the show-cause hearing is the property owner's chance to argue the tax delinquency is wrong or be redeemed. Held about 6 weeks before final foreclosure judgment.">Show-cause hearing</span> — passed without recorded judgment against this parcel.</div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">2026-02-19</div>
+      <div class="desc"><span class="tt" data-tip="The judicial-foreclosure hearing is when the court enters the formal foreclosure judgment. After this, the property cannot be redeemed except by full payment before the absolute foreclosure date (March 31).">Judicial foreclosure hearing</span> — passed without recorded judgment against this parcel (consistent with redemption having occurred).</div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">2026-03-31</div>
+      <div class="desc"><span class="tt" data-tip="In Michigan, March 31 of the foreclosure year is the absolute deadline. Title vests in the County Treasurer at midnight unless the delinquent taxes have been redeemed. After this, owners lose all rights without any further notice.">Absolute foreclosure date</span> — title would vest in the County Treasurer if not redeemed.</div>
+    </div>
+
+    <div class="tl-event">
+      <div class="date">~ April 2026</div>
+      <div class="desc">Property listed at <strong>$319,900</strong>, then reduced to <strong>$284,900</strong> (Brick Built, MLS #26006743). <span class="badge confirmed">Confirmed</span></div>
+    </div>
+
+    <div class="tl-event transaction">
+      <div class="date">~ Late April 2026</div>
+      <div class="desc">Daughter's offer accepted.</div>
+    </div>
+
+    <div class="tl-event future">
+      <div class="date">~ Mid-May 2026</div>
+      <div class="desc">Inspection contingency expires. <strong>This is the deadline for verifications + inspector findings.</strong></div>
+    </div>
+
+  </div>
+
+  <p style="font-size: 12px; color: var(--c-muted);">Color key: 🟤 routine · 🟦 transaction · 🔴 foreclosure / lien · 🟢 redemption / discharge · 🟡 physical improvement · ⚫ death</p>
+</section>
+
+<section id="owner">
+  <h2>Seller investigation: CLEAR SKY TRUST &amp; affiliates</h2>
+
+  <h3>The seller is a serial fix-and-flip investor / landlord</h3>
+  <p><span class="badge confirmed">Confirmed</span> Clear Sky Trust appears <strong>35 times</strong> in the Ingham County deed index since 2022. Trustees are <strong>Eric Snyder</strong> and <strong>Linda Snyder</strong>; <strong>Benjamin Ford</strong> appears as a third party on multiple trust certifications. The Trust acquires by quitclaim from estates and other distressed sellers (often via affiliated wholesale entity <strong>MITTEN REI LLC</strong>) and conveys out by warranty deed at retail prices.</p>
+  <p><span class="badge confirmed">Confirmed</span> The Trust also operates as a landlord. <a href="https://micourt.courts.michigan.gov/case-search/court/D55/search?lastName=CLEAR%20SKY%20TRUST&page=1" target="_blank">Case 2024-241430LT-LT — CLEAR SKY TRUST V BLAYS</a> was filed in Ingham 55th District Court (Mason) on 4/5/2024 — a closed landlord-tenant action.</p>
+  <p><span class="badge confirmed">Confirmed</span> Sale prices to retail buyers in this index range from $20,000 to $104,300; the proposed 2980 Budd Road sale at $284,900 would be the highest yet.</p>
+
+  <h3>The acquisition pattern</h3>
+  <p>Clear Sky Trust acquired this property at <strong>$75,000</strong> in August 2022 through a probate-flip orchestrated by attorney <strong>Jeshua Lauka</strong> (<a href="https://www.dwlawpc.com/Bio/JeshuaLauka.html" target="_blank">David, Wierenga &amp; Lauka, P.C.</a>, Grand Rapids). Lauka is the registered agent for MITTEN REI LLC. The renovation budget for a fix of this scope is typically $80-120K. <span class="badge estimate">Estimate</span> implied flip margin: <strong>$90-130K</strong> at the current $284,900 list price.</p>
+
+  <div class="flow">
+    <div class="box"><strong>Hawkins Estate</strong><br><span style="font-size:11px;color:var(--c-muted);">probate, 7/2022</span></div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>MITTEN REI LLC</strong><br><span style="font-size:11px;color:var(--c-muted);">PR Deed, 7/25/2022</span></div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>Hawkins Trust</strong><br><span style="font-size:11px;color:var(--c-muted);">curative, 8/29/2022</span></div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>CLEAR SKY TRUST</strong><br><span style="font-size:11px;color:var(--c-muted);">$75,000 + $67,500 mortgage back, 8/29/2022</span></div>
+  </div>
+
+  <h3>MITTEN REI LLC — affiliated wholesale entity</h3>
+  <table>
+    <tr><th>Michigan ID</th><td>802351231</td></tr>
+    <tr><th>Formation</th><td>8/8/2019</td></tr>
+    <tr><th>Status</th><td><span class="badge confirmed">Confirmed</span> Marked <strong>INACTIVE / dissolved 3/1/2024</strong> per <a href="https://opencorporates.com/companies/us_mi/802351231" target="_blank">OpenCorporates</a> and <a href="https://michigan-company.com/co/mitten-rei-llc" target="_blank">michigan-company.com</a>.</td></tr>
+    <tr><th>Registered agent</th><td>Jeshua T. Lauka, 99 Monroe Ave NW, Grand Rapids MI 49503 — attorney at David, Wierenga &amp; Lauka, P.C.</td></tr>
+    <tr><th>Members / managers</th><td>Not publicly disclosed (Michigan LLCs aren't required to)</td></tr>
+  </table>
+  <div class="callout warn">
+    <h3>Mitten REI's status doesn't match its activity</h3>
+    <p><span class="badge confirmed">Confirmed</span> Despite the 3/1/2024 dissolution date in LARA, <a href="https://micourt.courts.michigan.gov/case-search/court/D55/search?lastName=MITTEN%20REI&page=1" target="_blank">Case 2025-25-04906-LT — MITTEN REI, LLC V JOHNSTON</a> was filed by Mitten REI on <strong>10/24/2025</strong> in Ingham 55th District. That's <em>after</em> the alleged dissolution.</p>
+    <p>Possible explanations: (a) the LLC was reinstated; (b) the dissolution data is inaccurate; (c) someone filed a court action in the name of a dissolved entity. <span class="badge recommend">Action</span> Title company should pull current LARA status before closing — any deed Mitten REI executed after 3/1/2024 may have a defect.</p>
+  </div>
+
+  <h3>The "Eric David Snyder" question</h3>
+  <p>I want to flag this clearly because it may be a red flag — but it's <strong>not yet confirmed</strong>:</p>
+  <p><span class="badge confirmed">Confirmed</span> An <strong>Eric David Snyder</strong> in Michigan had multiple <a href="https://www.michigan.gov/lara/news-releases/2019/05/21/lara-suspends-building-and-contracting-licenses-connected-to-eric-david-snyder" target="_blank">LARA building/contracting licenses suspended on May 21, 2019</a>. The suspension involved Snyder's Roofing LLC (Grand Rapids) and All American Remodeling, Inc., for failing to comply with consent orders following two homeowner complaints. The complaints alleged failure to pull building permits, failure to include license info in contracts, and — on a metal-roof install — "did not follow the manufacturer instructions on installing the roof covering and the flashing." Snyder failed to pay $1,000 in fines + $1,044.60 in restitution. Sources: <a href="https://www.fox17online.com/2019/05/21/state-suspends-license-of-grand-rapids-roofer" target="_blank">Fox 17</a>, <a href="https://www.woodtv.com/news/grand-rapids/state-suspends-w-mi-contractors-license/" target="_blank">WOOD-TV</a>, <a href="https://www.jlconline.com/business/michigan-suspends-roofing-contractors-license_c" target="_blank">JLC Online</a>.</p>
+  <p><span class="badge open">Open question</span> Whether the Eric Snyder who is trustee of Clear Sky Trust is the <em>same person</em> as the Eric David Snyder of the LARA suspension. Several pieces of circumstantial evidence point that way (Grand Rapids location for both, residential remodel work for both, Mitten REI was formed three months after the suspensions, Linda Snyder co-occurs in Greenville public-records databases where Snyder Roofing operated). But:</p>
+  <ul>
+    <li>"Eric David Snyder" is a common Michigan name — a different Eric David Snyder is an active medical doctor in Michigan.</li>
+    <li>LARA's current public licensee search shows <em>no</em> active or suspended builder/contractor licenses under any "Eric Snyder."</li>
+    <li>The deed image (paywalled $1) would show the trustee's signing address — that's the way to confirm.</li>
+  </ul>
+  <p><span class="badge recommend">Recommendation</span> Until confirmed otherwise, treat the renovation work as if it were performed by an unlicensed contractor with prior code-violation history — i.e., have the inspector specifically scrutinize the roof flashing, permit history, and any work that should have required a permit.</p>
+
+  <h3>Hawkins family attorney</h3>
+  <p><span class="badge confirmed">Confirmed</span> The third party on the 8/29/2022 Hawkins Trust certification is <strong>John J. Donahue III</strong>, a Michigan estate-planning / elder-law solo practitioner (Bar #41700, admitted 1988, 23411 Jefferson Ave, St. Clair Shores). Sources: <a href="https://www.avvo.com/attorneys/48080-mi-john-donahue-737471.html" target="_blank">Avvo</a>, <a href="https://lawyers.justia.com/lawyer/john-j-donahue-iii-715441" target="_blank">Justia</a>. The Hawkins side of the transaction had professional representation — a positive signal for clean chain-of-title on that side.</p>
+
+  <h3>Other Snyder-affiliated entities</h3>
+  <ul>
+    <li><strong>SNYDER'S REAL-ESTATE LLC</strong> (MI ID 803202778) — formed 4/19/2024 (right after Mitten REI dissolved), already inactive. <span class="badge confirmed">Confirmed</span> via <a href="https://michigan-company.com/co/snyder-s-real-estate-llc" target="_blank">michigan-company.com</a>.</li>
+  </ul>
+  <p><strong>Note on irrelevant findings:</strong> A separate "Clear Sky Advisers LLC" exists in Michigan at a Traverse City address — <em>this is a different entity</em>, an SEC-registered investment-adviser firm with different partners (Khawaja, Carapucci). I am not citing it here as related to the Trust because it is not related.</p>
+</section>
+
+<section id="environment">
+  <h2>Environmental &amp; health hazards</h2>
+
+  <div class="callout positive">
+    <h3>FEMA flood zone — out of harm's way</h3>
+    <p><span class="badge confirmed">Confirmed</span> Parcel sits in <strong>Zone X (minimal flood hazard)</strong> — outside both the 1% (100-year) and 0.2% (500-year) floodplains. FIRM panel <strong>26065C0425D</strong>, effective 8/16/2011 for Stockbridge Township.</p>
+    <p>A Zone A flood area runs along a wetland/drainage roughly 1,200-1,500 ft west of the parcel — not on this property. 6 amendments + 1 revalidation since 2011, all for <em>other</em> addresses in the township.</p>
+
+    <p style="margin-top:12px;"><strong>See it interactively (zoom in to confirm):</strong></p>
+    <ul>
+      <li><a href="https://msc.fema.gov/portal/search?AddressQuery=2980+Budd+Road+Stockbridge+MI+49285" target="_blank">FEMA Map Service Center — search by address</a> — pre-loaded; click "Dynamic Map" to zoom and pan, or "Map Image" to download the FIRM panel.</li>
+      <li><a href="https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd" target="_blank">FEMA National Flood Hazard Layer Viewer</a> — overlays flood zones on aerial imagery; search "2980 Budd Rd Stockbridge MI" to find the parcel.</li>
+    </ul>
+    <p style="font-size:13px;color:var(--c-muted);">The official static FIRM panel image is also downloadable from the FEMA Map Service Center linked above (click "Map Image &rarr; Download FIRM Panel"). The image is high-resolution but does not render crisply when scaled in a web browser; for parcel-level detail, the interactive FEMA viewer is the better tool.</p>
+  </div>
+
+  <div class="callout positive">
+    <h3>No PFAS sites within 10 miles</h3>
+    <p><span class="badge confirmed">Confirmed</span> Queried EGLE's MPART <span class="tt" data-tip="Per- and Polyfluoroalkyl Substances. A class of synthetic chemicals (PFOA, PFOS, etc.) used in non-stick coatings, firefighting foam, and stain-resistant fabrics. Don't break down in the environment, accumulate in groundwater, linked to cancer and immune effects. Michigan has been one of the most aggressive US states in identifying and regulating PFAS.">PFAS</span> feature service directly via API. Both layers (Sites and Areas of Interest) returned <strong>zero features within 10 statute miles</strong> of the parcel coordinates. <a href="https://www.michigan.gov/egle/maps-data/mpart-pfas-gis" target="_blank">Verify on EGLE MPART map</a>.</p>
+  </div>
+
+  <div class="callout positive">
+    <h3>No underground-tank or contamination sites within ~1 mile</h3>
+    <p><span class="badge confirmed">Confirmed</span> Drove the EGLE Water Well Viewer to the parcel coordinates and enabled all five environmental overlays (Part 211 USTs, Part 213 LUSTs, Part 201 contamination, Part 115 landfills, hazardous-waste TSD facilities). <strong>No environmental site markers visible within ~1-mile radius.</strong></p>
+    <p><span class="badge recommend">Recommend</span> The on-property inspection should still include a metal-detector sweep around the basement perimeter and outside the foundation. Old residential heating-oil tanks were typically unregistered and won't appear in the EGLE database. A leaking buried oil tank is a $20,000+ remediation problem — worth 30 minutes with a metal detector.</p>
+    <p>Verify on <a href="https://experience.arcgis.com/experience/4af1cf3544b34411b1da781d756956e2" target="_blank">EGLE Water Well Viewer</a>.</p>
+  </div>
+
+  <div class="callout warn">
+    <h3>Ingham County is among the worst in Michigan for naturally-occurring arsenic in well water</h3>
+    <p><span class="badge confirmed">Confirmed</span> per <a href="https://www.michiganpublic.org/environment-science/2014-07-02/theres-arsenic-in-michigans-well-water-but-not-a-lot-of-people-are-talking-about-it" target="_blank">Michigan Public</a> and <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/DWEHD/Contamination-Investigation/arsenic-water-quality-maps-michigan-county.pdf" target="_blank">MDHHS arsenic county data</a>. The deep bedrock aquifer this property's well draws from (281 ft) is the geology most associated with elevated arsenic.</p>
+    <p>EPA action level is 10 ppb. Long-term exposure linked to bladder, lung, and kidney cancer.</p>
+    <p><span class="badge recommend">Recommend</span> Test the well water for arsenic before closing. If elevated, an under-sink reverse-osmosis filter ($300-600 install) handles drinking and cooking water. Whole-house treatment is more expensive (~$2,000-4,000).</p>
+  </div>
+
+  <div class="callout warn">
+    <h3>Radon — Ingham County is EPA Zone 2 (moderate-to-elevated)</h3>
+    <p><span class="badge confirmed">Confirmed</span> per <a href="https://www.epa.gov/sites/default/files/2014-08/documents/michigan.pdf" target="_blank">EPA Map of Radon Zones - Michigan</a>. Predicted average indoor radon 2-4 pCi/L; some homes are above 4 pCi/L. EPA action level is <strong>4 pCi/L</strong>.</p>
+    <p>Stone foundation + Michigan basement is a textbook radon-entry profile, regardless of zone designation.</p>
+    <p><span class="badge recommend">Recommend</span> Short-term radon test (48-96 hours, closed house, lowest occupied level) — $15-30 retail or $150 professional. If elevated, mitigation is typically $800-1,500 (active subslab depressurization).</p>
+  </div>
+
+  <div class="callout warn">
+    <h3>Lead-based paint — assume present</h3>
+    <p><span class="badge confirmed">Confirmed</span> Federal law requires the seller to provide a <strong>Lead-Based Paint Disclosure</strong> for any home built before 1978. <span class="badge open">Open question</span> Demand it now if not yet provided.</p>
+    <p>1860 means original interior trim, doors, windows, and exterior siding accumulated multiple lead-paint coats over 165 years. Even if "renovated," lead is in the substrate of pre-2022 paint, in window glazing putty, in original plaster, etc.</p>
+    <p><span class="badge recommend">Recommend</span> A <span class="tt" data-tip="A state-certified lead inspector who tests painted surfaces, soil, dust, and water for lead. Required for federally-funded housing transactions; commonly used pre-purchase by families with young children. Costs $400-700.">lead-paint risk assessment</span> by a state-certified Michigan Lead Risk Assessor — especially if children under 6 will live in the home. See <a href="#vendors">Recommended Vendors</a> below.</p>
+    <p>Also test the well water for lead — old plumbing supply lines may have lead solder pre-1986 or lead service-line components.</p>
+  </div>
+
+  <div class="callout warn">
+    <h3>Asbestos / vermiculite</h3>
+    <p>Common asbestos-containing materials in 1860+ Michigan houses with later updates:</p>
+    <ul>
+      <li><strong>Vermiculite attic insulation</strong> — Zonolite-brand vermiculite from the Libby, Montana mine (most pre-1990s vermiculite) is contaminated with asbestos. The listing claims "new insulation" — <span class="badge open">Open question</span> verify whether new insulation was installed <em>over</em> old vermiculite or <em>after removing</em> it. Removal is regulated abatement.</li>
+      <li>Pipe wrap on basement plumbing (looks like white wrapped tape)</li>
+      <li>Vinyl floor tile and mastic, especially 9×9-inch tiles pre-1980</li>
+      <li>Plaster (some Michigan plasters contain asbestos)</li>
+      <li>Old roofing felt or siding shingles</li>
+      <li>Boiler / furnace wraps and ducting</li>
+    </ul>
+    <p><span class="badge recommend">Recommend</span> Have asbestos testing done on any disturbed materials ($300-500 for several samples). Ask the seller for any abatement records done during the renovation.</p>
+  </div>
+
+  <h3>Well details</h3>
+  <p><span class="badge confirmed">Confirmed</span> via EGLE Wellogic public search:</p>
+  <table>
+    <tr><th>Well ID</th><td>33000001176</td></tr>
+    <tr><th>Drilled</th><td>2/21/1980 (46 years old)</td></tr>
+    <tr><th>Depth</th><td>281 feet (deep bedrock aquifer)</td></tr>
+    <tr><th>Static water level</th><td>30 feet</td></tr>
+    <tr><th>Submitted by</th><td>Local Health Department (suggests permitted at construction)</td></tr>
+  </table>
+  <p>Casing typically lasts 30-60 years; <strong>this well is at the high end</strong>. The original 1980 pump has almost certainly been replaced once already (typical pump life 10-15 years). <span class="badge recommend">Recommend</span> ask the seller for pump-replacement and pressure-tank-replacement receipts.</p>
+
+  <h3>Wetlands</h3>
+  <p>The Zone A flood area to the west indicates a wetland system. <span class="badge recommend">Recommend</span> verify the parcel is not partially regulated wetland on the <a href="https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/" target="_blank">USFWS National Wetlands Inventory</a> using parcel coordinates 42.499168, −84.200343. For a flat farmhouse with most acreage open, this is unlikely to be a problem but worth a check.</p>
+</section>
+
+<section id="permits">
+  <h2>Permits &amp; physical condition</h2>
+
+  <div class="callout warn">
+    <h3>Permit history is not online — must phone the township</h3>
+    <p><span class="badge confirmed">Confirmed</span> Stockbridge Township Building Department: <strong>125 S. Clinton Street, Stockbridge MI 49285</strong>. Hours Monday-Friday 9:00 AM - 12:00 PM. Phone <a href="tel:5178519362">(517) 851-9362</a> or alternate <a href="tel:5178517530">(517) 851-7530</a>. <strong>No online permit search.</strong></p>
+    <p>Ask for permit history on parcel 33-16-16-04-400-023 since 8/29/2022. Specifically:</p>
+    <ul>
+      <li>Furnace replacement (claimed January 2026)</li>
+      <li>Roof replacement (metal roof)</li>
+      <li>Electrical work</li>
+      <li>Plumbing work</li>
+      <li>Insulation, drywall, or structural repairs</li>
+    </ul>
+  </div>
+
+  <h3>Structural concerns specific to a 1860 farmhouse</h3>
+  <p>The combination of <strong>165-year-old structure + fieldstone foundation + Michigan basement</strong> is the highest-risk inspection profile in residential. None of the listed renovations address structure. Specific concerns the inspector should look at:</p>
+
+  <table>
+    <tr><th style="width:30%;">Concern</th><th>What to look for</th></tr>
+    <tr><td>Fieldstone foundation</td><td>Mortar deterioration, water infiltration, displaced or rolled stones, parging that may hide cracks. Probe mortar with a pick.</td></tr>
+    <tr><td>Sill plate</td><td>Where wood meets the stone wall — probe with an awl for rot and termite damage. The most common 1860-era structural failure point.</td></tr>
+    <tr><td>Michigan basement / crawl space</td><td>Chronic moisture, mold, no thermal envelope, vapor-barrier integrity in any dirt-floor section, joist condition above.</td></tr>
+    <tr><td><span class="tt" data-tip="A construction style common before 1930 where the wall studs run continuously from the sill plate up to the rafters. Has no fire-stop blocking between floors — a fire can travel up the wall cavity unchecked. Insulation rarely retrofitted properly.">Balloon framing</span></td><td>Look for evidence of no fire-stops between floors, sister joists, beam additions in hidden areas. Check for sagging or sloping floors.</td></tr>
+    <tr><td>Plumbing supply pipe material</td><td>Galvanized steel = old (will need replacement). Copper with lead solder pre-1986 = lead exposure risk. PEX or modern copper = updated.</td></tr>
+    <tr><td><span class="tt" data-tip="An early 20th century wiring system with copper conductors held in ceramic 'knobs' and run through ceramic 'tubes' through joists. Often left in walls when retrofitting modern wiring. Many home insurance carriers won't write a policy on a house with active knob-and-tube. Risk: degraded insulation, overloaded by modern appliances.">Knob-and-tube</span> wiring remnants</td><td>Open the panel; inspector should trace at least 2-3 random outlets back to confirm no abandoned active knob-and-tube. <span class="badge recommend">Critical for insurability.</span></td></tr>
+    <tr><td>Electrical panel</td><td>No double-tapped breakers, no aluminum branch wiring, no Federal Pacific or Zinsco panels (insurance flags), proper bonding/grounding, AFCI/GFCI in required locations.</td></tr>
+    <tr><td>HVAC</td><td>New furnace must be permitted; get manufacturer + serial #, AHRI certificate, warranty paperwork. Old farmhouse ductwork is often undersized or leaky.</td></tr>
+    <tr><td>Metal roof — extra scrutiny given seller-entity history</td><td>Type (standing seam vs exposed-fastener), underlayment, ice/water shield at eaves and valleys, flashing at chimney/penetrations, snow guards (Michigan winter requirement), <strong>manufacturer's installation instructions followed</strong>, manufacturer warranty paperwork and registration. The 2019 LARA case specifically alleged Snyder did not follow manufacturer instructions on a metal-roof install.</td></tr>
+    <tr><td>Original windows</td><td>Confirm which were replaced vs. left original. Sash condition + lead-paint glazing on remaining originals.</td></tr>
+    <tr><td>Buried oil tank</td><td>Common on 1860 farm properties. Inspector should use a metal detector around the basement perimeter and outside the foundation.</td></tr>
+    <tr><td>Wood-destroying organisms / termite</td><td>Especially given fieldstone-to-soil contact and 165-year-old structure.</td></tr>
+    <tr><td>Chimney(s)</td><td>Original masonry probably present. Have flue scoped if any wood-burning intention is planned.</td></tr>
+  </table>
+</section>
+
+<section id="market">
+  <h2>Market &amp; financial</h2>
+
+  <h3>Pricing</h3>
+  <p><span class="badge confirmed">Confirmed</span> Stockbridge median sale price (last 12 months): <strong>$308,000, +15% YoY</strong>. Median 41 days on market. Source: Homes.com Stockbridge market data.</p>
+  <p>Listed at $284,900, reduced from $319,900. Acquisition cost to Clear Sky Trust: $75,000 in August 2022.</p>
+  <p><span class="badge estimate">Estimate</span> Implied flip margin: <strong>$90-130K</strong> (based on $80-120K typical renovation budget for the work claimed). For a 1860 farmhouse with a stone foundation on 1.68 acres, a 10-20% discount to median is typical to reflect carrying-cost overhead and unrenovated structural systems — so a target accepted price of <strong>$250-275K</strong> is consistent with comps.</p>
+
+  <h3>Michigan Proposal A "tax uncap" — budget for a tax increase</h3>
+  <p>In Michigan, when a property sells, its <span class="tt" data-tip="The Taxable Value (TV) is the basis for property tax calculation. Under Michigan's Proposal A (1994), TV can rise no more than 5% or inflation per year while the same family owns the property. When the property sells, TV resets ('uncaps') to the State Equalized Value, which is roughly 50% of fair market value. New buyers often see a significant tax jump.">Taxable Value</span> resets ('uncaps') from the prior owner's capped TV to the <span class="tt" data-tip="State Equalized Value — the assessor's estimate of the property's true cash value divided by 2. The post-sale Taxable Value is reset to the SEV at sale. Approximately 50% of the sale price.">State Equalized Value</span>, which is roughly 50% of true cash value.</p>
+  <p>2025 listed taxes: $5,607.</p>
+  <p><span class="badge estimate">Estimate</span> After uncap to SEV based on a $284,900 sale, expect Taxable Value ≈ $142,450. Stockbridge Township millage rates run roughly 32-40 mills for non-homestead, 17-25 mills for <span class="tt" data-tip="A Michigan property tax exemption for the owner's principal residence — reduces the school operating millage by 18 mills. Saves roughly $1,800 per $100K of taxable value per year.">Principal Residence Exemption</span>.</p>
+  <p>Estimated annual property tax post-uncap:</p>
+  <ul>
+    <li><strong>$2,400-3,600 with Principal Residence Exemption claimed</strong> (likely scenario for your daughter)</li>
+    <li>$4,500-5,700 if not claimed</li>
+  </ul>
+  <p><span class="badge recommend">Recommend</span> Phone Stockbridge Township assessor at <a href="tel:5178519362">(517) 851-9362</a> and ask for the projected 2027 SEV/TV/tax bill. The 2025 figure on the listing may reflect an uncap adjustment that has already happened and may already include the post-2022 reset. Verify before budgeting.</p>
+
+  <h3>Resale-risk factors</h3>
+  <ul>
+    <li>(+) Below-median list price for a renovated home; rural appeal is steady; school district decent.</li>
+    <li>(+) Out of flood zone, in a good location between Lansing and Ann Arbor.</li>
+    <li>(−) 1860 farmhouse sells to a narrower buyer pool — resale is subject to the next inspector finding the same things this inspector finds.</li>
+    <li>(−) Property tax uncap will surprise the next buyer too — comps reflect uncapped taxes.</li>
+    <li>(−) Clear Sky Trust's pattern of chronic tax delinquencies on its inventory creates a small reputational risk for whoever owns the chain of title.</li>
+  </ul>
+</section>
+
+<section id="inspector">
+  <h2>Inspector's punch list</h2>
+  <p>Pre-pay-attention list for the home inspector. <strong>This is in addition to a standard inspection.</strong> A licensed Michigan home inspector typically covers structure, exterior, roof, attic, plumbing, electrical, HVAC, interior, insulation, ventilation. Cost ≈ $400-700 for the standard inspection.</p>
+
+  <h3>Required separate inspections</h3>
+  <table>
+    <tr><th>#</th><th>Inspection</th><th>Why specifically here</th><th>Cost</th></tr>
+    <tr><td>1</td><td>Radon test (short-term, 48-96 hr)</td><td>Ingham County Zone 2; stone foundation + Michigan basement is a classic entry path</td><td class="num">$15-30 kit · $150 pro</td></tr>
+    <tr><td>2</td><td>Full well-water panel: arsenic (priority), lead, copper, nitrates, total coliform / E. coli, iron, manganese, hydrogen sulfide, hardness, pH, sodium, chloride. Add PFAS &amp; VOCs.</td><td>Ingham County is among MI's worst for natural arsenic; deep bedrock well; agricultural area for nitrates</td><td class="num">$250-500 base<br>+$300-500 PFAS</td></tr>
+    <tr><td>3</td><td>Well system inspection: pump age + condition, pressure tank age, casing condition, sanitary cap, pitless adapter, water flow rate (gpm) under load</td><td>1980 well; pump and tank have likely been replaced; ask for receipts</td><td class="num">$150-300</td></tr>
+    <tr><td>4</td><td>Septic tank + field inspection (open and visually inspect, dye test)</td><td>Original septic likely 30-50 years old; renovations may have increased load. <strong>Not part of a standard home inspection.</strong></td><td class="num">$300-500</td></tr>
+    <tr><td>5</td><td>Lead-based paint risk assessment (state-certified MI Lead Risk Assessor)</td><td>1860 home; especially if children under 6 will live there. See <a href="#vendors">Recommended Vendors</a>.</td><td class="num">$400-700</td></tr>
+    <tr><td>6</td><td>Asbestos sampling of any potentially-disturbed materials (attic insulation, basement pipe wrap, vinyl floor tile, plaster, boiler wrap)</td><td>Vermiculite + 1860+era updates likely</td><td class="num">$300-500</td></tr>
+    <tr><td>7</td><td>Mold inspection (Michigan basement + crawl space)</td><td>Stone foundation + chronic-moisture basement</td><td class="num">$300-500</td></tr>
+    <tr><td>8</td><td>Wood-destroying organism / termite inspection</td><td>Fieldstone foundation in soil contact; 165-year-old structure</td><td class="num">$50-150 (often free with home inspection)</td></tr>
+    <tr><td>9</td><td>Buried fuel-oil tank check — metal detector around basement perimeter and outside foundation, ask seller</td><td>Common on 1860 farm properties. A leak is a $20K+ remediation problem.</td><td class="num">included</td></tr>
+    <tr><td>10</td><td>Boundary survey (if last survey is old or unavailable)</td><td>1.68-acre rural parcel; mineral-rights and easement clarity</td><td class="num">$500-1,500</td></tr>
+  </table>
+
+  <h3>Specific items the home inspector should open up and probe</h3>
+
+  <h4>Foundation &amp; basement</h4>
+  <ul>
+    <li>Probe mortar between fieldstones with a pick — check for crumbling, missing mortar.</li>
+    <li>Look for water staining, mineral efflorescence, prior parging that may hide cracks.</li>
+    <li>Sill plate (where wood meets stone): probe with an awl for rot, termite damage.</li>
+    <li>Posts/columns supporting first floor — confirm proper bearing and footings.</li>
+    <li>Vapor barrier in any dirt-floor crawl space.</li>
+    <li>Look up at floor joists from below for sagging, sister-joists, beam additions.</li>
+    <li>Confirm exterior grade and downspout discharge — does water drain <em>away</em> from foundation?</li>
+  </ul>
+
+  <h4>Framing</h4>
+  <ul>
+    <li>Evidence of balloon framing without fire blocks (peek into wall voids if possible during electrical/plumbing inspection).</li>
+    <li>Bouncy / sloping floors.</li>
+    <li>Joist notching/drilling for utility runs (1990s+ rough-ins are a frequent code issue).</li>
+    <li>Roof framing in attic — visible water stains, sister rafters, sagging ridge.</li>
+  </ul>
+
+  <h4>Plumbing</h4>
+  <ul>
+    <li>Identify supply pipe material throughout: galvanized steel (old) vs copper with lead solder pre-1986 vs PEX or modern copper (updated).</li>
+    <li>Check for active leaks under all fixtures and at the well-line entry.</li>
+    <li>Water pressure at multiple fixtures simultaneously.</li>
+    <li>Drain wastes — cast iron vs PVC vs ABS.</li>
+    <li>Hot water heater age, type (electric/propane/oil), pan/drain.</li>
+    <li>Confirm shutoffs work at every fixture.</li>
+  </ul>
+
+  <h4>Electrical</h4>
+  <ul>
+    <li>Open the panel — confirm proper bonding/grounding, no double-tapped breakers, no aluminum branch wiring, no Federal Pacific or Zinsco panels.</li>
+    <li><strong>Trace at least 2-3 random outlets back</strong> to confirm no abandoned active knob-and-tube.</li>
+    <li>AFCI/GFCI in required locations (kitchens, baths, basement, exterior, garage, laundry).</li>
+    <li>Smoke / CO detectors hardwired (claimed by listing — verify).</li>
+    <li>Service amperage adequate (100A min, 200A preferred).</li>
+  </ul>
+
+  <h4>HVAC</h4>
+  <ul>
+    <li>New furnace: confirm it was permitted (call township per <a href="#permits">Permits</a>). Get manufacturer + serial #, AHRI certificate, warranty paperwork.</li>
+    <li>Have inspector look at supply/return ducts — old farmhouse ducts are often undersized or leaky.</li>
+    <li>Combustion air supply, venting, condensate handling.</li>
+    <li>AC system if present — age, refrigerant type, condition.</li>
+    <li>Backup heat plan (in case furnace goes down in MI winter).</li>
+  </ul>
+
+  <h4>Roof — extra scrutiny given the seller-entity history</h4>
+  <ul>
+    <li>Type (standing seam vs exposed-fastener metal).</li>
+    <li>Underlayment (synthetic vs felt; ice-and-water shield at eaves and valleys).</li>
+    <li>Flashing at chimney, plumbing penetrations, valleys, sidewalls.</li>
+    <li>Snow guards (Michigan winter requirement).</li>
+    <li><strong>Manufacturer's installation instructions followed</strong> (the 2019 LARA case specifically alleged Snyder did NOT follow manufacturer instructions on a metal roof).</li>
+    <li>Manufacturer warranty paperwork and registration.</li>
+    <li>Permit number and final inspection sign-off.</li>
+  </ul>
+
+  <h4>Other</h4>
+  <ul>
+    <li>Windows: confirm which were actually replaced vs. left original. Lead-paint glazing on remaining originals.</li>
+    <li>Vinyl siding: j-channels, flashings, weep holes. Original siding underneath (asbestos shingles, cedar, etc.).</li>
+    <li>Foundation grade and drainage.</li>
+    <li>Outbuildings — including detached garage; wiring is often unpermitted retrofits.</li>
+    <li>Driveway encroachments, shared easements, right-of-way clarity.</li>
+    <li>Chimney(s): scope the flue if wood-burning is intended.</li>
+  </ul>
+</section>
+
+<section id="title">
+  <h2>Title company punch list</h2>
+  <p>Specific recorded documents the title company should pull, verify, and clear before closing. Ask the title commitment to address each by exception number.</p>
+
+  <table>
+    <tr><th>#</th><th>Document</th><th>Why</th></tr>
+    <tr class="highlight"><td>1</td><td><strong>Doc 2026-001338</strong> — Redemption of Notice of Forfeiture, 1/16/2026, $7,800.17</td><td><strong>Confirm parcel 33-16-16-04-400-023 is in the legal description.</strong> If not, the property is County-owned and not transferable by Clear Sky Trust.</td></tr>
+    <tr class="highlight"><td>2</td><td><strong>Doc 2022-032386</strong> — $67,500 Mortgage from Clear Sky Trust to Hawkins Robert L Trust</td><td><strong>Must be discharged at or before closing.</strong> Order a payoff letter from the Hawkins Trust.</td></tr>
+    <tr><td>3</td><td>Doc 2022-032385 — Warranty Deed Hawkins Trust → Clear Sky Trust</td><td>Verify legal description matches; verify all required trustees signed; verify acknowledgment proper. <em>Also reveals trustee Eric Snyder's signing address — settles the identity question.</em></td></tr>
+    <tr><td>4</td><td>Doc 2022-032384 — Trust certification</td><td>Confirms who could sign for the Hawkins Trust as of 8/29/2022 (Robert L Hawkins II + Charles as successor co-trustee + Donahue J III).</td></tr>
+    <tr><td>5</td><td>Doc 2022-026514 — Letters of Authority for Personal Representative</td><td>Confirms PR's authority for the 7/25/2022 Personal Rep Deed (doc 2022-028216).</td></tr>
+    <tr><td>6</td><td>Docs 2022-028216 / 2022-032382 / 2022-032383 — same-day round-trip through MITTEN REI LLC</td><td>Title company should approve the curative chain. Confirm none of these created a senior interest in MITTEN REI that wasn't released. Mitten REI shows as dissolved 3/1/2024 but filed an eviction in October 2025 — title co. should resolve.</td></tr>
+    <tr><td>7</td><td>Older Hawkins-era liens / mortgages (1985-2017): Farmers State Bank of Munith, Dart National Bank, MI Treasury 2017 lien (released 4/2022 by doc 2022-015219)</td><td>Confirm all are discharged of record.</td></tr>
+    <tr><td>8</td><td>Easements / oil-and-gas leases</td><td>The 1980 BF-406384 oil-and-gas lease and others recorded in this section suggest mineral rights may be severed. Title commitment should state mineral-rights status and any active surface-use easements.</td></tr>
+    <tr><td>9</td><td>Boundary survey</td><td>Recommended on a 1.68-acre rural parcel. Some lenders require.</td></tr>
+    <tr><td>10</td><td>Property tax certification</td><td>Confirm 2024 + 2025 taxes paid in full and 2026 not yet delinquent.</td></tr>
+  </table>
+
+  <p>Free index search at <a href="https://rep2laredo.fidlar.com/MIIngham/DirectSearch/" target="_blank">Fidlar Direct Search (Ingham)</a>; document images paywalled at $8.75/search + $1.00/page on <a href="https://tapestry.fidlar.com/Tapestry2/Search.aspx" target="_blank">Tapestry</a>.</p>
+</section>
+
+<section id="questions">
+  <h2>Questions to ask the seller — in writing, before contingency expiry</h2>
+
+  <h3>Required disclosures (legally mandated)</h3>
+  <ol>
+    <li>Provide the <strong>Federal Lead-Based Paint Disclosure</strong> form (required for pre-1978 sales).</li>
+    <li>Provide the <strong>Michigan Seller's Disclosure Statement</strong> in full, with all known defects.</li>
+  </ol>
+
+  <h3>Permits — call out by name; demand permit numbers and inspection sign-offs</h3>
+  <ol start="3">
+    <li>Was the <strong>furnace replacement permitted</strong> by Stockbridge Township? Permit number and inspection sign-off.</li>
+    <li>Was the <strong>roof replacement permitted</strong>? Permit number, contractor name, and inspection sign-off. Provide the roofing manufacturer name and warranty registration.</li>
+    <li>Were the <strong>electrical updates permitted</strong>? Permit number(s), contractor name(s), final inspection.</li>
+    <li>Were the <strong>plumbing updates permitted</strong>? Permit number(s), contractor name(s), final inspection.</li>
+    <li>Was any <strong>structural repair</strong> to foundation, sills, or framing done? Permit, contractor, photos.</li>
+  </ol>
+
+  <h3>Systems and services</h3>
+  <ol start="8">
+    <li>Provide the most recent <strong>septic tank pumping receipt</strong> and date of last drain-field service.</li>
+    <li>Provide any <strong>water-quality test results</strong> (arsenic, bacteria, nitrates, lead) from the past 5 years.</li>
+    <li>Has the <strong>well pump</strong> been replaced since the well was drilled in 1980? When? Provide service records.</li>
+    <li>When was the <strong>pressure tank</strong> last replaced?</li>
+    <li>Was any old <strong>underground storage tank</strong> (heating oil, propane, gasoline) ever used or removed on the property? Closure documentation if so.</li>
+  </ol>
+
+  <h3>Hazards and hidden conditions</h3>
+  <ol start="13">
+    <li><strong>Knob-and-tube wiring</strong> — was any found and removed during the renovation? Where? Provide receipts. (This affects insurability.)</li>
+    <li>Is there any <strong>vermiculite</strong> insulation present, or <strong>was it removed</strong> during the renovation? Provide abatement documentation if removed.</li>
+    <li>Any <strong>asbestos-containing materials</strong> identified during renovation (floor tile, pipe wrap, plaster, boiler wrap, siding shingles)?</li>
+    <li>Any <strong>lead pipes or lead solder</strong> in plumbing supply lines?</li>
+    <li>Any <strong>mold remediation</strong> done in the basement / crawl space?</li>
+  </ol>
+
+  <h3>Title and tax</h3>
+  <ol start="18">
+    <li>Confirm payoff statement for <strong>mortgage 2022-032386</strong> ($67,500 to Hawkins Trust) and that it will be released at closing.</li>
+    <li>Confirm the <strong>2025 tax foreclosure</strong> affecting this parcel was redeemed — provide a copy of the redemption certificate that <em>names parcel 33-16-16-04-400-023 specifically</em> (not a "multiple legals" group document).</li>
+    <li>Are there any <strong>easements, mineral-rights leases, oil-and-gas leases, or surface-use agreements</strong> on this parcel?</li>
+  </ol>
+
+  <h3>Other</h3>
+  <ol start="21">
+    <li>Why was the listing price reduced from $319,900 to $284,900?</li>
+    <li>Has the property been <strong>listed previously</strong> (prior MLS 25053093) and if so, why did it not sell?</li>
+  </ol>
+</section>
+
+<section id="vendors">
+  <h2>Recommended vendors / specialists</h2>
+
+  <div class="callout info">
+    <h3>Lead-paint risk assessment — pre-researched contractors</h3>
+    <p>For an 1860 single-family home in Stockbridge, expected price range: <strong>$500-800</strong> for a full lead inspection + risk assessment (XRF scan of all painted surfaces, dust wipe sampling per HUD protocol, soil samples around the drip line, written report with photos).</p>
+    <p>State directory (verify cert numbers): <a href="https://www.michigan.gov/mileadsafe/lead-services/hire-lead-professional/certified-lead-inspector-risk-assessors" target="_blank">Michigan Lead Safe — Certified Inspector / Risk Assessors</a></p>
+
+    <h4 style="margin-top: 16px;">Recommended call order (top 3 priorities)</h4>
+    <ol>
+      <li><strong>Tyler Lenling, Pinckney</strong> — <a href="tel:7348785588">734-878-5588</a> — closest (~15 mi), self-employed (often most flexible). Cert P-000386.</li>
+      <li><strong>Mannik &amp; Smith Group, Okemos</strong> (Kory McKay) — <a href="tel:5173815300">517-381-5300</a> — same county, larger firm with professional written reports. Cert P-009268.</li>
+      <li><strong>Michigan Lead Paint Inspectors, Detroit</strong> — <a href="tel:3135564778">313-556-4778</a> — has published rate $450-600 (useful price anchor for comparison). Statewide travel.</li>
+    </ol>
+
+    <h4 style="margin-top: 16px;">Full list, by distance</h4>
+    <table>
+      <tr><th>Distance</th><th>Cert #</th><th>Inspector</th><th>Firm / location</th><th>Phone</th></tr>
+      <tr><td>~15 mi</td><td>P-000386</td><td>Tyler Lenling</td><td>Self-Employed, Pinckney</td><td><a href="tel:7348785588">734-878-5588</a></td></tr>
+      <tr><td>~20 mi</td><td>P-008118</td><td>Jack Cyrul</td><td>Self-Employed, Howell</td><td><a href="tel:7343959027">734-395-9027</a></td></tr>
+      <tr><td>~25 mi</td><td>P-009268</td><td>Kory McKay</td><td>Mannik &amp; Smith Group, Okemos</td><td><a href="tel:5173815300">517-381-5300</a></td></tr>
+      <tr><td>~25 mi</td><td>P-005718</td><td>Aaron Yankee</td><td>Arcadis U.S., Lansing</td><td><a href="tel:2487874814">248-787-4814</a></td></tr>
+      <tr><td>~25 mi</td><td>P-000814</td><td>Kevin Kasischke</td><td>MI Dept Health and Human Services, Lansing</td><td><a href="tel:6169275657">616-927-5657</a></td></tr>
+      <tr><td>~25 mi</td><td>P-003238</td><td>Gary Bosh</td><td>Michigan State University, Lansing</td><td>(not listed)</td></tr>
+      <tr><td>~30 mi</td><td>P-009341</td><td>Jelaine Tinsley</td><td>ASTI Environmental, Brighton</td><td><a href="tel:8102252800">810-225-2800</a></td></tr>
+      <tr><td>~30 mi</td><td>P-006369</td><td>Lucas Wright</td><td>ASTI Environmental, Brighton (same firm)</td><td><a href="tel:8102252800">810-225-2800</a></td></tr>
+      <tr><td>~30 mi</td><td>P-000642</td><td>Asim Khan</td><td>Ann Arbor Environmental Services</td><td><a href="tel:7345461188">734-546-1188</a></td></tr>
+      <tr><td>~30 mi</td><td>P-009253</td><td>Andrew Kokoszka</td><td>Nova Environmental, Ann Arbor</td><td><a href="tel:7349300995">734-930-0995</a></td></tr>
+      <tr><td>~30 mi</td><td>P-010953</td><td>Russell Love</td><td>Nova Environmental, Ann Arbor</td><td><a href="tel:7349300995">734-930-0995</a></td></tr>
+      <tr><td>~30 mi</td><td>P-004662</td><td>Michelle Gilliland</td><td>TRC, Ann Arbor</td><td><a href="tel:7345456557">734-545-6557</a></td></tr>
+      <tr><td>~30 mi</td><td>P-004420</td><td>Kyle King</td><td>Top Notch Lead Inspections, Superior Twp</td><td><a href="tel:3138281302">313-828-1302</a></td></tr>
+      <tr><td>~30 mi</td><td>P-010984</td><td>Cody Knowlton</td><td>Tetra Tech, Ann Arbor</td><td><a href="tel:4062083540">406-208-3540</a></td></tr>
+      <tr><td>~30 mi</td><td>P-010360</td><td>Nathan Woodruff</td><td>Tetra Tech, Ann Arbor</td><td><a href="tel:9063798433">906-379-8433</a></td></tr>
+      <tr><td>statewide</td><td>—</td><td>—</td><td>Michigan Lead Paint Inspectors, Detroit</td><td><a href="tel:3135564778">313-556-4778</a></td></tr>
+      <tr><td>statewide</td><td>—</td><td>—</td><td>AA Ventures Inspection (SE MI)</td><td><a href="tel:2486574682">248-657-4682</a></td></tr>
+    </table>
+
+    <h4 style="margin-top: 16px;">Suggested call script</h4>
+    <p style="background:#fff; padding:12px; border-radius:6px; border-left:3px solid var(--c-recommend); font-style: italic; color: var(--c-muted);">"Hi, I'm getting a lead inspection done on an 1860 single-family home in Stockbridge, MI. We're in the buying process and need to schedule within 7 days. Can you quote a full pre-purchase risk assessment — XRF scan, dust wipes, soil samples, and a written report? What's your turnaround on the report? And do you have availability before [target date]?"</p>
+
+    <p>Confirm on each call: total quoted price (incl. travel surcharge to Stockbridge), earliest inspection date, report turnaround, what's included, whether they'll attend during the buyer's home inspection, cert number on file.</p>
+
+    <p style="font-size:13px;color:var(--c-muted);margin-top:12px;">Also: Luxfer/3M LeadCheck swabs and a Schneider Labs dust-wipe DIY kit have been ordered from Amazon — useful for a quick pre-screen but not a substitute for the certified assessment. The DIY kits identify presence of lead-based paint in spot tests; the certified assessor's XRF scan is non-destructive and quantitative.</p>
+  </div>
+
+  <h3>Other specialist services</h3>
+  <table>
+    <tr><th>Service</th><th>Where to find</th><th>Cost</th></tr>
+    <tr><td>Radon test (short-term)</td><td>Hardware store kit (e.g., AccuStar, RadonAway) or hire a Michigan-licensed radon professional via <a href="https://www.michigan.gov/egle/about/organization/drinking-water-and-environmental-health/indoor-radon-program" target="_blank">EGLE Indoor Radon Program</a></td><td class="num">$15-30 kit · $150 pro</td></tr>
+    <tr><td>Well-water testing (full panel + arsenic + PFAS)</td><td>Ingham County Health Dept can refer; or <a href="https://www.michigan.gov/egle/about/organization/drinking-water-and-environmental-health/drinking-water-laboratory" target="_blank">EGLE Drinking Water Laboratory</a></td><td class="num">$250-500 base · +$300-500 PFAS</td></tr>
+    <tr><td>Septic tank inspection (separate from home inspection)</td><td>Local septic-pumping company or county-certified inspector via <a href="tel:5178874308">Ingham County Health Dept (517) 887-4308</a></td><td class="num">$300-500</td></tr>
+    <tr><td>Asbestos / vermiculite testing</td><td>Tri-Tech Testing, Innovative Home Inspection, Complichek Environmental</td><td class="num">$300-500 / several samples</td></tr>
+    <tr><td>Mold inspection</td><td>State-certified MI mold inspector — your home inspector can refer</td><td class="num">$300-500</td></tr>
+    <tr><td>Boundary survey</td><td>Local Michigan-licensed surveyor</td><td class="num">$500-1,500</td></tr>
+    <tr><td>Title insurance / deed pulls</td><td>Local title company</td><td class="num">part of closing</td></tr>
+  </table>
+</section>
+
+<section id="sources">
+  <h2>Source documents &amp; references</h2>
+
+  <h3>Saved primary-source artifacts (in this folder)</h3>
+  <ul class="src-list">
+    <li><a href="ingham_2025_tax_insert_publication.pdf">2025 Ingham County Tax Insert (24 pages, 597 KB)</a> — Official show-cause publication. Search for parcel 33-16-16-04-400-023 to see the $7,800.17 delinquency naming both Clear Sky Trust and Hawkins Robert L Trust.</li>
+    <li><a href="https://msc.fema.gov/portal/search?AddressQuery=2980+Budd+Road+Stockbridge+MI+49285" target="_blank">FEMA FIRM panel 26065C0425D — interactive viewer</a> — Official flood map for Stockbridge Township. Effective 8/16/2011. Parcel is in Zone X (minimal flood hazard). Click "Map Image &rarr; Download FIRM Panel" on FEMA's site to download the static PNG (delivered as a 44 MB ZIP).</li>
+    <li><a href="ingham_auction_2022_August_Auction_Results_Bids_Won_-_By_Lot.pdf">Ingham August 2022 tax-foreclosure auction results (13 pages)</a> — Parcel <em>not</em> in this auction.</li>
+    <li><a href="ingham_auction_10.19.22_Auction_Results_-_Bids_Won_by_Lot.pdf">Ingham October 2022 tax-foreclosure auction results (5 pages)</a> — Parcel <em>not</em> in this auction.</li>
+    <li><a href="ingham_auction_8.24.23_Auction_Results.pdf">Ingham August 2023 tax-foreclosure auction results (10 pages)</a> — Parcel <em>not</em> in this auction.</li>
+    <li><a href="ingham_auction_10.18.23_Auction_-_Bids_Won_By_Lot.pdf">Ingham October 2023 tax-foreclosure auction results (5 pages)</a> — Parcel <em>not</em> in this auction.</li>
+    <li><a href="ingham_auction_10.21.24_Auction_-_BIDS_WON_BY_LOT.pdf">Ingham October 2024 tax-foreclosure auction results (4 pages)</a> — Parcel <em>not</em> in this auction.</li>
+    <li><a href="deed_index_findings.md">Deed-index findings (markdown)</a> — Tabulated chain of recorded deeds, mortgages, and tax-related instruments.</li>
+    <li><a href="REPORT.md">Full source-cited report (markdown)</a> — The detailed underlying report this site was built from.</li>
+  </ul>
+
+  <h3>Public-records portals (search yourself)</h3>
+
+  <h4>Property records</h4>
+  <ul class="src-list">
+    <li>BS&A Stockbridge Township: <a href="https://bsaonline.com/?uid=650" target="_blank">bsaonline.com/?uid=650</a> — search parcel <span class="doc-num">33-16-16-04-400-023</span>. Owner shown free; full record paywalled $6.95.</li>
+    <li>Ingham deed index (free): <a href="https://rep2laredo.fidlar.com/MIIngham/DirectSearch/" target="_blank">Fidlar Direct Search (Ingham)</a></li>
+    <li>Ingham deed images (paid): <a href="https://tapestry.fidlar.com/Tapestry2/Search.aspx" target="_blank">Fidlar Tapestry</a> ($8.75/search + $1/page)</li>
+    <li>Ingham GIS / parcel viewer: <a href="https://ingham-equalization.rsgis.msu.edu/viewer/" target="_blank">Ingham Equalization Tax Mapping Viewer</a></li>
+  </ul>
+
+  <h4>Treasurer / foreclosure</h4>
+  <ul class="src-list">
+    <li>Ingham Treasurer foreclosure info: <a href="https://tr.ingham.org/departments_and_officials/treasurer/forfeiture___foreclosure.php" target="_blank">tr.ingham.org/...forfeiture___foreclosure</a></li>
+    <li>Ingham Treasurer auctions: <a href="https://tr.ingham.org/departments_and_officials/treasurer/auctions.php" target="_blank">tr.ingham.org/...auctions</a></li>
+  </ul>
+
+  <h4>Court records</h4>
+  <ul class="src-list">
+    <li>MiCOURT statewide search: <a href="https://micourt.courts.michigan.gov/case-search/" target="_blank">micourt.courts.michigan.gov/case-search</a></li>
+    <li>Ingham CourtRecordSearch (Circuit + Probate): <a href="https://courts.ingham.org/CourtRecordSearch/" target="_blank">courts.ingham.org/CourtRecordSearch</a></li>
+  </ul>
+
+  <h4>Cases referenced in this report</h4>
+  <ul class="src-list">
+    <li><a href="https://micourt.courts.michigan.gov/case-search/court/D55/search?lastName=CLEAR%20SKY%20TRUST&page=1" target="_blank">Case 2024-241430LT-LT — CLEAR SKY TRUST V BLAYS</a> (Ingham 55th District, eviction, 4/5/2024, CLOSED)</li>
+    <li><a href="https://micourt.courts.michigan.gov/case-search/court/D55/search?lastName=MITTEN%20REI&page=1" target="_blank">Case 2025-25-04906-LT — MITTEN REI, LLC V JOHNSTON</a> (Ingham 55th District, eviction, 10/24/2025, CLOSED)</li>
+  </ul>
+
+  <h4>State agencies</h4>
+  <ul class="src-list">
+    <li>LARA Verify a License: <a href="https://aca-prod.accela.com/MILARA/Default.aspx" target="_blank">aca-prod.accela.com/MILARA</a></li>
+    <li>LARA Corporations Online (LLC search): <a href="https://cofs.lara.state.mi.us/" target="_blank">cofs.lara.state.mi.us</a></li>
+    <li><a href="https://www.michigan.gov/lara/news-releases/2019/05/21/lara-suspends-building-and-contracting-licenses-connected-to-eric-david-snyder" target="_blank">LARA news release: Eric David Snyder license suspension (May 2019)</a></li>
+  </ul>
+
+  <h4>Environmental</h4>
+  <ul class="src-list">
+    <li>FEMA Flood Map Service Center: <a href="https://msc.fema.gov/portal/search" target="_blank">msc.fema.gov/portal/search</a></li>
+    <li>EGLE Wellogic (well log lookup): <a href="https://www.egle.state.mi.us/wellogic/" target="_blank">egle.state.mi.us/wellogic</a> — Well 33000001176</li>
+    <li>EGLE Water Well Viewer (UST overlay): <a href="https://experience.arcgis.com/experience/4af1cf3544b34411b1da781d756956e2" target="_blank">experience.arcgis.com/.../wellviewer</a></li>
+    <li>EGLE MPART PFAS map: <a href="https://www.michigan.gov/egle/maps-data/mpart-pfas-gis" target="_blank">michigan.gov/egle/maps-data/mpart-pfas-gis</a></li>
+    <li>EPA Radon Map of Michigan (PDF): <a href="https://www.epa.gov/sites/default/files/2014-08/documents/michigan.pdf" target="_blank">epa.gov/.../michigan.pdf</a></li>
+    <li>USFWS National Wetlands Inventory mapper: <a href="https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/" target="_blank">fwsprimary.wim.usgs.gov</a></li>
+  </ul>
+
+  <h4>Phone-call list</h4>
+  <table>
+    <tr><th>Office</th><th>Phone</th><th>Why</th></tr>
+    <tr><td>Stockbridge Township Building Dept</td><td><a href="tel:5178519362">(517) 851-9362</a></td><td>Permit history</td></tr>
+    <tr><td>Stockbridge Township Treasurer</td><td><a href="tel:5178519472">(517) 851-9472</a></td><td>Projected post-uncap taxes</td></tr>
+    <tr><td>Ingham County Health Department</td><td><a href="tel:5178874308">(517) 887-4308</a></td><td>Septic + well permits</td></tr>
+    <tr><td>Ingham County Treasurer (Alan Fox)</td><td><a href="tel:5176767233">(517) 676-7233</a></td><td>Verify tax-foreclosure redemption document covers parcel 33-16-16-04-400-023</td></tr>
+    <tr><td>Ingham County Register of Deeds</td><td><a href="tel:5176767294">(517) 676-7294</a></td><td>Deed search subscription, document orders</td></tr>
+  </table>
+</section>
+
+<footer>
+  <p>Report compiled from public records on 2026-05-04 for the family of the buyer of 2980 Budd Road. Use this as a starting point — your title company, inspector, and attorney should independently verify everything before closing.</p>
+  <p>Color key for badges: 🟢 Confirmed · 🟡 Estimate · 🔵 Recommendation · 🟠 Assumption · 🟣 Open question</p>
+</footer>
+
+</main>
+
+<script>
+// Tap-to-show tooltips on touch devices
+document.addEventListener('click', function(e) {
+  const tt = e.target.closest('.tt');
+  // Remove active state from all others
+  document.querySelectorAll('.tt.tt-active').forEach(el => {
+    if (el !== tt) el.classList.remove('tt-active');
+  });
+  if (tt) {
+    tt.classList.toggle('tt-active');
+    e.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
