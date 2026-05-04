@@ -16,6 +16,7 @@ A public-records due-diligence report for a property purchase in Stockbridge, Mi
 
 ### Saved primary-source artifacts (in repo)
 - `ingham_2025_tax_insert_publication.pdf` — Ingham County 2025 tax-foreclosure show-cause publication (lists this parcel as $7,800.17 delinquent).
+- `wellogic_33000001176_well_log.pdf` — EGLE Wellogic official well-log record for the on-property well (drilled 2/21/1980 for prior owner Rex Bates; 281 ft into bedrock).
 - `ingham_auction_*.pdf` — five Ingham County tax-foreclosure auction result PDFs (Aug 2022, Oct 2022, Aug 2023, Oct 2023, Oct 2024). The parcel does not appear in any of these — confirms the property was *not* tax-auctioned 2022-2024.
 
 ### FEMA flood-map artifacts (NOT in repo — excluded for size)
